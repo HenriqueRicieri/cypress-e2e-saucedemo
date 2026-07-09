@@ -1,7 +1,7 @@
 {
   "name": "cypress-e2e-saucedemo",
   "version": "1.0.0",
-  "description": "End-to-end test automation suite for SauceDemo built with Cypress — Page Object Model, custom commands and CI on GitHub Actions",
+  "description": "End-to-end test automation suite for SauceDemo using Cypress, Page Objects and GitHub Actions CI",
   "author": "Henrique Ricieri",
   "license": "MIT",
   "scripts": {
