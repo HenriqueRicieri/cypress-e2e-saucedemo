@@ -61,7 +61,7 @@ Every push to `main` triggers the [E2E Tests workflow](.github/workflows/ci.yml)
 
 ## Author
 
-**Henrique Ricieri**, Test Analyst
+**Henrique Ricieri**, QA Analyst
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/henriquericieri)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/HenriqueRicieri)
