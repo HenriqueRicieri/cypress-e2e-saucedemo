@@ -22,7 +22,11 @@ End-to-end test automation suite for [SauceDemo](https://www.saucedemo.com), bui
 - **Custom commands**: `cy.loginAs()` encapsulates the UI login flow used by every authenticated scenario
 - **Fixtures** separate test data from test logic
 - **GitHub Actions CI** runs the full suite on every push and uploads screenshots when something fails
-- **Automatic retries** in CI to eliminate flakiness
+- **Retries in CI**: a failed test gets up to two more attempts in headless runs, so a transient hiccup does not fail the build while a real regression still does
+
+## Design notes
+
+SauceDemo is a single-page app whose server only answers at `/`. Visiting an inner route such as `/inventory.html` directly returns 404, and the app does not redirect a user who is already authenticated. Every authenticated scenario therefore enters through the real login flow, wrapped in `cy.loginAs()`, rather than seeding a session with `cy.session()`.
 
 ## Project structure
 
@@ -57,7 +61,7 @@ Every push to `main` triggers the [E2E Tests workflow](.github/workflows/ci.yml)
 
 ## Author
 
-**Henrique Ricieri**, QA Analyst
+**Henrique Ricieri**, Test Analyst
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/henrique-ricieri-77592917a)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/henriquericieri)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/HenriqueRicieri)
